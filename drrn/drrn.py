@@ -153,7 +153,7 @@ class DRRN_Agent:
         try: 
             files = os.listdir(self.save_path + "/bak")
             for filename in files:
-                if (filename.startswith("memory")) or (filename.startswith("model") or (filename.startswith("progress") or (filename.startswith("log")))):
+                if filename.startswith("progress") or (filename.startswith("log"))):
                     os.remove(self.save_path + "/bak/" + filename)
         except Exception as e:
             print("Error removing backups.")
