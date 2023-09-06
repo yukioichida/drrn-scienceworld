@@ -231,7 +231,6 @@ def train(agent, envs, max_steps, update_freq, eval_freq, checkpoint_freq, log_f
 
             envs.reset()
 
-            agent.save("-steps" + str(stepsFunctional) + "-eps" + str(numEpisodes))
 
 
     # Save anything left in history buffers
@@ -241,7 +240,7 @@ def train(agent, envs, max_steps, update_freq, eval_freq, checkpoint_freq, log_f
 
     print("Training complete.")
     # Final save
-    #agent.save("-steps" + str(stepsFunctional) + "-eps" + str(numEpisodes))
+    agent.save("-steps" + str(stepsFunctional) + "-eps" + str(numEpisodes))
     # Close environments
     envs.close_extras()
 
