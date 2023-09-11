@@ -46,7 +46,7 @@ def resetWithVariation(env, variationMin, variationMax, simplificationStr):
 
 def resetWithVariationTrain(env, simplificationStr):
     variationIdx = env.getRandomVariationTrain()        ## Random variation on train
-    variationIdx = env.getRandomVariationTest() # for test
+    #variationIdx = env.getRandomVariationTest() # for test
     env.reset()    
     initialObs, initialDict = env.resetWithVariation(variationIdx, simplificationStr)
     print("Simplifications: " + env.getSimplificationsUsed() )
